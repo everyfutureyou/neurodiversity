@@ -2,6 +2,8 @@ class User < ApplicationRecord
   has_secure_password
   has_many :sessions, dependent: :destroy
   has_many :posts, foreign_key: :author_id, dependent: :destroy
+  has_one :membership, dependent: :destroy
+  has_one :membership, dependent: :destroy
 
   enum :role, { guest: 0, member: 1, admin: 2 }, validate: true
 

@@ -140,3 +140,32 @@ de:
       body: "Willkommen bei der Neurodiversitaet Schule! Bitte bestaetigen Sie Ihre E-Mail-Adresse, um Ihr Konto zu aktivieren."
       cta: "E-Mail-Adresse bestaetigen"
       expiry: "Dieser Link laueft in 24 Stunden ab."
+
+  memberships:
+    new:
+      title: "Neurodiversitaet Schule unterstuetzen"
+      heading: "Neurodiversitaet Schule unterstuetzen"
+      description: "Waehlen Sie einen Betrag, um die Plattform zu unterstuetzen. €0 ist immer kostenlos — Ihr Beitrag ist freiwillig."
+    show:
+      title: "Ihre Mitgliedschaft"
+      heading: "Ihre Mitgliedschaft"
+      status_label: "Status"
+      amount_label: "Monatlicher Beitrag"
+      monthly_amount: "%{amount}/Monat"
+    success:
+      title: "Willkommen, Mitglied!"
+      heading: "Sie sind dabei!"
+      body: "Ihre Mitgliedschaft ist jetzt aktiv. Danke fuer Ihre Unterstuetzung."
+      cta: "Blog erkunden"
+    activated_free: "Willkommen! Ihre kostenlose Mitgliedschaft ist jetzt aktiv."
+    status:
+      inactive: "Inaktiv"
+      active: "Aktiv"
+      past_due: "Zahlungsrueckstand"
+      canceled: "Gekuendigt"
+    widget:
+      amount_label: "Monatlicher Betrag"
+      amount_error: "Bitte geben Sie €0 oder mindestens €0,50 ein (Stripe-Minimum)."
+      free_note: "€0 ist immer moeglich. Sie koennen Ihren Betrag spaeter aendern."
+      preset_free: "Kostenlos (€0)"
+      submit: "Mitgliedschaft aktivieren"

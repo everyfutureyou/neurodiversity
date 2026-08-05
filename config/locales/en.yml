@@ -140,3 +140,32 @@ en:
       body: "Welcome to Neurodiversity School! Please confirm your email address to activate your account."
       cta: "Confirm email address"
       expiry: "This link expires in 24 hours."
+
+  memberships:
+    new:
+      title: "Support Neurodiversity School"
+      heading: "Support Neurodiversity School"
+      description: "Choose an amount to support the platform. €0 is always free — your contribution is voluntary."
+    show:
+      title: "Your Membership"
+      heading: "Your Membership"
+      status_label: "Status"
+      amount_label: "Monthly contribution"
+      monthly_amount: "%{amount}/month"
+    success:
+      title: "Welcome, member!"
+      heading: "You're in!"
+      body: "Your membership is now active. Thank you for supporting Neurodiversity School."
+      cta: "Explore the blog"
+    activated_free: "Welcome! Your free membership is now active."
+    status:
+      inactive: "Inactive"
+      active: "Active"
+      past_due: "Past due"
+      canceled: "Canceled"
+    widget:
+      amount_label: "Monthly amount"
+      amount_error: "Please enter €0 or at least €0.50 (Stripe minimum)."
+      free_note: "€0 is always available. You can change your amount later."
+      preset_free: "Free (€0)"
+      submit: "Activate membership"

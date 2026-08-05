@@ -33,7 +33,15 @@ Rails.application.routes.draw do
       end
       resources :users, only: %i[index]
     end
+
+    # Membership
+    resource :membership, only: %i[new create show] do
+      get :success, on: :collection
+    end
   end
+
+  # Stripe webhooks — outside locale scope, no CSRF, raw body
+  post "webhooks/stripe", to: "webhooks/stripe#create"
 
   # Dev-only component gallery
   if Rails.env.development?
