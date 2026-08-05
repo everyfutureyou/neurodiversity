@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= t("mailer.message_notification.heading") %></h1>
+    <p><%= t("mailer.message_notification.body", sender: @message.user.email_address) %></p>
+    <p><strong><%= @message.subject %></strong></p>
+    <p><%= @message.body %></p>
+    <p>
+      <%= link_to t("mailer.message_notification.view_messages"), @messages_url %>
+    </p>
+  </body>
+</html>

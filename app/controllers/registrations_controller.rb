@@ -9,6 +9,7 @@ class RegistrationsController < ApplicationController
 
   def create
     @user = User.new(registration_params)
+    @user.locale = I18n.locale.to_s
     if @user.save
       UserMailer.confirmation(@user).deliver_later
       render Views::Registrations::Confirm.new
@@ -22,6 +23,7 @@ class RegistrationsController < ApplicationController
 
     if user
       user.update!(confirmed_at: Time.current)
+      UserMailer.welcome(user).deliver_later
       start_new_session_for(user)
       redirect_to root_path, notice: t("registrations.confirmed")
     else

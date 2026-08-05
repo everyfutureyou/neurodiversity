@@ -1,0 +1,7 @@
+<%= t("mailer.comment_notification.heading") %>
+
+<%= t("mailer.comment_notification.body", commenter: @comment.user.email_address) %>
+
+"<%= @comment.body %>"
+
+<%= t("mailer.comment_notification.view_post") %>: <%= @post_url %>

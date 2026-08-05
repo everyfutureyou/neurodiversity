@@ -26,6 +26,17 @@ class RegistrationsControllerTest < ActionDispatch::IntegrationTest
     assert_response :unprocessable_entity
   end
 
+  test "confirm with valid token sends welcome email" do
+    user = User.create!(email_address: "welcome@example.com",
+                        password: "securepassword123",
+                        password_confirmation: "securepassword123")
+    token = user.generate_token_for(:email_confirmation)
+
+    assert_emails 1 do
+      get confirm_registrations_path(token: token)
+    end
+  end
+
   test "confirm with valid token activates account and signs in" do
     user = User.create!(email_address: "confirm@example.com",
                         password: "securepassword123",

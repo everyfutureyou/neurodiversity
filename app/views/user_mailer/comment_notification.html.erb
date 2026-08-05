@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= t("mailer.comment_notification.heading") %></h1>
+    <p><%= t("mailer.comment_notification.body", commenter: @comment.user.email_address) %></p>
+    <blockquote>
+      <%= @comment.body %>
+    </blockquote>
+    <p>
+      <%= link_to t("mailer.comment_notification.view_post"), @post_url %>
+    </p>
+  </body>
+</html>

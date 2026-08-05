@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
+      UserMailer.comment_notification(@comment).deliver_later if notify_post_author?
       respond_to do |format|
         format.turbo_stream
         format.html { redirect_to post_path(@post.slug), notice: t("comments.created") }
@@ -40,6 +41,10 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body, :parent_id)
+  end
+
+  def notify_post_author?
+    @post.author != current_user
   end
 
   def require_confirmed!

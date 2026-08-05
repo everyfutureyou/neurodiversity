@@ -165,6 +165,31 @@ en:
       cta: "Confirm email address"
       expiry: "This link expires in 24 hours."
 
+    reset:
+      subject: "Reset your Neurodiversity School password"
+      heading: "Reset your password"
+      body: "Click the link below to reset your password. This link expires in 15 minutes."
+      cta: "Reset password"
+      expiry: "This link expires in 15 minutes."
+
+    welcome:
+      subject: "Welcome to Neurodiversity School"
+      heading: "Your account is confirmed"
+      body: "Your email address has been confirmed and your account is now active. We're glad you're here."
+      cta: "Explore the blog"
+
+    comment_notification:
+      subject: "New comment on your post"
+      heading: "Someone commented on your post"
+      body: "%{commenter} left a comment on your post."
+      view_post: "View post"
+
+    message_notification:
+      subject: "New contact message"
+      heading: "A new message has arrived"
+      body: "You have received a new message from %{sender}."
+      view_messages: "View messages"
+
   memberships:
     new:
       title: "Support Neurodiversity School"

@@ -9,6 +9,7 @@ class User < ApplicationRecord
   enum :role, { guest: 0, member: 1, admin: 2 }, validate: true
 
   normalizes :email_address, with: ->(e) { e.strip.downcase }
+  normalizes :locale, with: ->(l) { I18n.available_locales.map(&:to_s).include?(l.to_s) ? l.to_s : I18n.default_locale.to_s }
 
   def at_least_member? = member? || admin?
 

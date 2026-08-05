@@ -6,6 +6,20 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     @member = users(:member)
   end
 
+  test "comment on another user's post enqueues notification email" do
+    sign_in_as @member
+    assert_emails 1 do
+      post post_comments_path(@post.slug), params: { comment: { body: "Great article!" } }
+    end
+  end
+
+  test "comment on own post does not send notification email" do
+    sign_in_as users(:one) # one is the post author
+    assert_no_emails do
+      post post_comments_path(@post.slug), params: { comment: { body: "My own post." } }
+    end
+  end
+
   # --- CREATE ---
 
   test "member can post a comment" do

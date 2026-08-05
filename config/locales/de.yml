@@ -165,6 +165,31 @@ de:
       cta: "E-Mail-Adresse bestaetigen"
       expiry: "Dieser Link laueft in 24 Stunden ab."
 
+    reset:
+      subject: "Passwort der Neurodiversitaet Schule zuruecksetzen"
+      heading: "Passwort zuruecksetzen"
+      body: "Klicken Sie auf den Link unten, um Ihr Passwort zurueckzusetzen. Dieser Link lauft in 15 Minuten ab."
+      cta: "Passwort zuruecksetzen"
+      expiry: "Dieser Link lauft in 15 Minuten ab."
+
+    welcome:
+      subject: "Willkommen bei der Neurodiversitaet Schule"
+      heading: "Ihr Konto ist bestaetigt"
+      body: "Ihre E-Mail-Adresse wurde bestaetigt und Ihr Konto ist jetzt aktiv. Wir freuen uns, dass Sie dabei sind."
+      cta: "Blog erkunden"
+
+    comment_notification:
+      subject: "Neuer Kommentar zu Ihrem Beitrag"
+      heading: "Jemand hat Ihren Beitrag kommentiert"
+      body: "%{commenter} hat einen Kommentar zu Ihrem Beitrag hinterlassen."
+      view_post: "Beitrag ansehen"
+
+    message_notification:
+      subject: "Neue Kontaktnachricht"
+      heading: "Eine neue Nachricht ist eingegangen"
+      body: "Sie haben eine neue Nachricht von %{sender} erhalten."
+      view_messages: "Nachrichten anzeigen"
+
   memberships:
     new:
       title: "Neurodiversitaet Schule unterstuetzen"

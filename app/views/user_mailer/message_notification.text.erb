@@ -1,0 +1,9 @@
+<%= t("mailer.message_notification.heading") %>
+
+<%= t("mailer.message_notification.body", sender: @message.user.email_address) %>
+
+Subject: <%= @message.subject %>
+
+<%= @message.body %>
+
+<%= t("mailer.message_notification.view_messages") %>: <%= @messages_url %>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= t("mailer.welcome.heading") %></h1>
+    <p><%= t("mailer.welcome.body") %></p>
+    <p><%= @user.email_address %></p>
+    <p>
+      <%= link_to t("mailer.welcome.cta"), @blog_url %>
+    </p>
+  </body>
+</html>

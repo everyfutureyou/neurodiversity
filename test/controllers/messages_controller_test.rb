@@ -5,6 +5,13 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
     @member = users(:member)
   end
 
+  test "member submitting a message enqueues notification email to admins" do
+    sign_in_as @member
+    assert_emails 1 do
+      post messages_path, params: { message: { subject: "Notify test", body: "Body." } }
+    end
+  end
+
   test "member can GET the contact form" do
     sign_in_as @member
     get new_message_path
