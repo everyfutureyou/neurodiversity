@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1><%= t("mailer.confirmation.heading") %></h1>
+    <p><%= t("mailer.confirmation.body") %></p>
+    <p>
+      <%= link_to t("mailer.confirmation.cta"), @confirmation_url %>
+    </p>
+    <p><%= t("mailer.confirmation.expiry") %></p>
+  </body>
+</html>

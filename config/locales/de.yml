@@ -1,0 +1,76 @@
+de:
+  app:
+    name: "Neurodiversitaet Schule"
+
+  nav:
+    sign_in: "Anmelden"
+    sign_out: "Abmelden"
+    register: "Kostenlos beitreten"
+    account: "Konto"
+
+  locale_switcher:
+    switch_to_de: "Auf Deutsch wechseln"
+    switch_to_en: "Switch to English"
+
+  home:
+    title: "Neurodiversitaet Schule"
+    headline: "Lerne ueber Neurodiversitaet"
+    subheading: "Eine gemeinschaftliche Plattform zu ADHS, Autismus, Legasthenie und mehr."
+    cta_register: "Kostenlos beitreten"
+    cta_sign_in: "Anmelden"
+
+  sessions:
+    new:
+      title: "Anmelden"
+      heading: "Willkommen zurueck"
+      remember_me: "Angemeldet bleiben"
+      forgot_password: "Passwort vergessen?"
+      submit: "Anmelden"
+      no_account: "Noch kein Konto?"
+      register_link: "Kostenlos beitreten"
+    invalid_credentials: "Falsche E-Mail oder Passwort."
+    unconfirmed: "Bitte bestaetigen Sie Ihre E-Mail-Adresse, bevor Sie sich anmelden."
+    rate_limited: "Zu viele Versuche. Bitte spaeter erneut versuchen."
+
+  registrations:
+    new:
+      title: "Konto erstellen"
+      heading: "Konto erstellen"
+      submit: "Konto erstellen"
+      have_account: "Haben Sie bereits ein Konto?"
+      sign_in_link: "Anmelden"
+    confirm:
+      title: "E-Mail pruefen"
+      heading: "E-Mail pruefen"
+      body: "Wir haben einen Bestaedigungslink an Ihre E-Mail-Adresse gesendet. Klicken Sie darauf, um Ihr Konto zu aktivieren."
+    confirmed: "Ihr Konto wurde bestaetigt. Willkommen!"
+    invalid_token: "Dieser Bestaedigungslink ist ungueltig oder abgelaufen."
+
+  passwords:
+    new:
+      title: "Passwort zuruecksetzen"
+      heading: "Passwort vergessen?"
+      instructions: "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zuruecksetzen."
+      submit: "Reset-Link senden"
+    edit:
+      title: "Neues Passwort festlegen"
+      heading: "Neues Passwort festlegen"
+      submit: "Passwort aktualisieren"
+    reset_sent: "Falls ein Konto mit dieser E-Mail existiert, wurde ein Reset-Link gesendet."
+    reset_success: "Ihr Passwort wurde zurueckgesetzt. Bitte melden Sie sich an."
+    mismatch: "Passwoerter stimmen nicht ueberein. Bitte erneut versuchen."
+    invalid_token: "Dieser Reset-Link ist ungueltig oder abgelaufen."
+    rate_limited: "Zu viele Versuche. Bitte spaeter erneut versuchen."
+
+  fields:
+    email: "E-Mail-Adresse"
+    password: "Passwort"
+    password_confirmation: "Passwort bestaetigen"
+
+  mailer:
+    confirmation:
+      subject: "Bestaetigen Sie Ihr Neurodiversitaet-Schule-Konto"
+      heading: "E-Mail-Adresse bestaetigen"
+      body: "Willkommen bei der Neurodiversitaet Schule! Bitte bestaetigen Sie Ihre E-Mail-Adresse, um Ihr Konto zu aktivieren."
+      cta: "E-Mail-Adresse bestaetigen"
+      expiry: "Dieser Link laueft in 24 Stunden ab."

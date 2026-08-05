@@ -1,0 +1,76 @@
+en:
+  app:
+    name: "Neurodiversity School"
+
+  nav:
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    register: "Join free"
+    account: "Account"
+
+  locale_switcher:
+    switch_to_de: "Switch to German"
+    switch_to_en: "Switch to English"
+
+  home:
+    title: "Neurodiversity School"
+    headline: "Learn about neurodiversity"
+    subheading: "A community-led platform exploring ADHD, autism, dyslexia, and more."
+    cta_register: "Join free"
+    cta_sign_in: "Sign in"
+
+  sessions:
+    new:
+      title: "Sign in"
+      heading: "Welcome back"
+      remember_me: "Keep me signed in"
+      forgot_password: "Forgot password?"
+      submit: "Sign in"
+      no_account: "No account yet?"
+      register_link: "Join free"
+    invalid_credentials: "Incorrect email or password."
+    unconfirmed: "Please confirm your email address before signing in."
+    rate_limited: "Too many attempts. Please try again later."
+
+  registrations:
+    new:
+      title: "Create your account"
+      heading: "Create your account"
+      submit: "Create account"
+      have_account: "Already have an account?"
+      sign_in_link: "Sign in"
+    confirm:
+      title: "Check your email"
+      heading: "Check your email"
+      body: "We sent a confirmation link to your email. Click it to activate your account."
+    confirmed: "Your account is confirmed. Welcome!"
+    invalid_token: "That confirmation link is invalid or has expired."
+
+  passwords:
+    new:
+      title: "Reset your password"
+      heading: "Forgot your password?"
+      instructions: "Enter your email and we will send you a reset link."
+      submit: "Send reset link"
+    edit:
+      title: "Set new password"
+      heading: "Set a new password"
+      submit: "Update password"
+    reset_sent: "If an account with that email exists, a reset link has been sent."
+    reset_success: "Your password has been reset. Please sign in."
+    mismatch: "Passwords did not match. Please try again."
+    invalid_token: "That reset link is invalid or has expired."
+    rate_limited: "Too many attempts. Please try again later."
+
+  fields:
+    email: "Email address"
+    password: "Password"
+    password_confirmation: "Confirm password"
+
+  mailer:
+    confirmation:
+      subject: "Confirm your Neurodiversity School account"
+      heading: "Confirm your email address"
+      body: "Welcome to Neurodiversity School! Please confirm your email address to activate your account."
+      cta: "Confirm email address"
+      expiry: "This link expires in 24 hours."

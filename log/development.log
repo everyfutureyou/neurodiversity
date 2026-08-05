@@ -1,0 +1,145 @@
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[35mSQL (0.4ms)[0m  [1m[35mSET search_path TO public /*application='Neurodiversity'*/[0m
+  [1m[35m (170.0ms)[0m  [1m[35mCREATE DATABASE "neurodiversity_development" ENCODING = 'unicode' /*application='Neurodiversity'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Neurodiversity'*/[0m
+  [1m[35m (44.7ms)[0m  [1m[35mCREATE DATABASE "neurodiversity_test" ENCODING = 'unicode' /*application='Neurodiversity'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Neurodiversity'*/[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Neurodiversity'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8573900916469733145) /*application='Neurodiversity'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Neurodiversity'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Neurodiversity'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-08-05 08:44:40.958528', '2026-08-05 08:44:40.958531') RETURNING "key" /*application='Neurodiversity'*/[0m
+Migrating to CreateUsers (20260805082357)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Neurodiversity'*/[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email_address" character varying NOT NULL, "password_digest" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Neurodiversity'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email_address" ON "users" ("email_address") /*application='Neurodiversity'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260805082357') RETURNING "version" /*application='Neurodiversity'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT /*application='Neurodiversity'*/[0m
+Migrating to CreateSessions (20260805082358)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN /*application='Neurodiversity'*/[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" bigserial primary key, "user_id" bigint NOT NULL, "ip_address" character varying, "user_agent" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_758836b4f0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='Neurodiversity'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_sessions_on_user_id" ON "sessions" ("user_id") /*application='Neurodiversity'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260805082358') RETURNING "version" /*application='Neurodiversity'*/[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT /*application='Neurodiversity'*/[0m
+Migrating to AddConfirmationToUsers (20260805083550)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Neurodiversity'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp(6) /*application='Neurodiversity'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260805083550') RETURNING "version" /*application='Neurodiversity'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT /*application='Neurodiversity'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(8573900916469733145) /*application='Neurodiversity'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Neurodiversity'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Neurodiversity'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO "$user", public /*application='Neurodiversity'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO public /*application='Neurodiversity'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mSET search_path TO "$user", public /*application='Neurodiversity'*/[0m
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/" for 127.0.0.1 at 2026-08-05 11:51:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Neurodiversity'*/[0m
+Processing by HomeController#redirect_to_locale as HTML
+Redirected to http://localhost:3000/de
+↳ app/controllers/home_controller.rb:13:in 'HomeController#redirect_to_locale'
+Completed 301 Moved Permanently in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/de" for 127.0.0.1 at 2026-08-05 11:51:23 +0200
+Processing by HomeController#index as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Home::Index
+  Rendered Views::Home::Index (Duration: 7.1ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2026-08-05 11:51:24 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 11:51:29 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 5.3ms | ActiveRecord: 13.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2026-08-05 11:51:29 +0200
+Processing by SessionsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Sessions::New
+  Rendered Views::Sessions::New (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2026-08-05 11:51:38 +0200
+Processing by SessionsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Sessions::New
+  Rendered Views::Sessions::New (Duration: 12.3ms | GC: 8.8ms)
+Completed 200 OK in 21ms (Views: 13.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 14.2ms)
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 11:51:38 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 7.7ms | GC: 5.8ms)
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 12.5ms)
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 11:51:44 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2026-08-05 11:51:45 +0200
+Processing by SessionsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Sessions::New
+  Rendered Views::Sessions::New (Duration: 4.8ms | GC: 1.5ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/passwords/new" for 127.0.0.1 at 2026-08-05 11:51:48 +0200
+Processing by PasswordsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Passwords::New
+  Rendered Views::Passwords::New (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 11:51:50 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
