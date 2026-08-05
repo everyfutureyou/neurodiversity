@@ -19,6 +19,23 @@ en:
     subheading: "A community-led platform exploring ADHD, autism, dyslexia, and more."
     cta_register: "Join free"
     cta_sign_in: "Sign in"
+    features:
+      heading: "What you will explore"
+      adhd:
+        title: "ADHD"
+        description: "Understand attention, focus, and what it means to think differently."
+      autism:
+        title: "Autism"
+        description: "Explore the autism spectrum — traits, strengths, and lived experience."
+      dyslexia:
+        title: "Dyslexia"
+        description: "Learn how dyslexia shapes reading and how to thrive with it."
+    membership_cta:
+      heading: "Join the community"
+      description: "Pay what you want — including €0. Your contribution supports the platform and is entirely voluntary."
+      member_heading: "You are a member"
+      member_description: "You have full access to all content. Start exploring the blog."
+      member_cta: "Go to blog"
 
   sessions:
     new:

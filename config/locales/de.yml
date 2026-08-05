@@ -19,6 +19,23 @@ de:
     subheading: "Eine gemeinschaftliche Plattform zu ADHS, Autismus, Legasthenie und mehr."
     cta_register: "Kostenlos beitreten"
     cta_sign_in: "Anmelden"
+    features:
+      heading: "Was du erkunden wirst"
+      adhd:
+        title: "ADHS"
+        description: "Verstehe Aufmerksamkeit, Fokus und was es bedeutet, anders zu denken."
+      autism:
+        title: "Autismus"
+        description: "Erkunde das Autismus-Spektrum — Eigenschaften, Staerken und gelebte Erfahrung."
+      dyslexia:
+        title: "Legasthenie"
+        description: "Lerne, wie Legasthenie das Lesen beeinflusst und wie man damit aufbluehen kann."
+    membership_cta:
+      heading: "Der Gemeinschaft beitreten"
+      description: "Zahle was du moechtest — auch €0. Dein Beitrag unterstuetzt die Plattform und ist vollkommen freiwillig."
+      member_heading: "Du bist Mitglied"
+      member_description: "Du hast vollen Zugang zu allen Inhalten. Erkunde jetzt den Blog."
+      member_cta: "Zum Blog"
 
   sessions:
     new:
