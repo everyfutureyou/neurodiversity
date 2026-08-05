@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Components::Nav < Components::Base
-  def template
+  def view_template
     nav(class: "border-b border-(--color-border) bg-(--color-surface)") do
       div(class: "container mx-auto px-4 py-3 flex items-center justify-between") do
         a(href: root_path, class: "text-(--color-brand) font-semibold text-lg") do

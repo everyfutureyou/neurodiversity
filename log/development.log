@@ -143,3 +143,90 @@ Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached
 
 
 Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 12:05:56 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 3.4ms | GC: 0.1ms)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 12:06:00 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 12:06:14 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 5.5ms | GC: 0.3ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 12:06:57 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/de/registrations/new" for 127.0.0.1 at 2026-08-05 12:06:59 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2026-08-05 12:06:59 +0200
+Processing by SessionsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Sessions::New
+  Rendered Views::Sessions::New (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/en/registrations/new" for 127.0.0.1 at 2026-08-05 12:07:00 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2026-08-05 12:07:01 +0200
+Processing by SessionsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Sessions::New
+  Rendered Views::Sessions::New (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2026-08-05 12:07:02 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"locale" => "en"}
+  Rendering Views::Registrations::New
+  Rendered Views::Registrations::New (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-08-05 12:07:04 +0200
+Processing by HomeController#redirect_to_locale as HTML
+Redirected to http://localhost:3000/de
+↳ app/controllers/home_controller.rb:13:in 'HomeController#redirect_to_locale'
+Completed 301 Moved Permanently in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/de" for 127.0.0.1 at 2026-08-05 12:07:04 +0200
+Processing by HomeController#index as HTML
+  Parameters: {"locale" => "de"}
+  Rendering Views::Home::Index
+  Rendered Views::Home::Index (Duration: 0.6ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

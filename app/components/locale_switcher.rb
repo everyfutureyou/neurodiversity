@@ -3,7 +3,7 @@
 class Components::LocaleSwitcher < Components::Base
   LOCALES = %w[de en].freeze
 
-  def template
+  def view_template
     div(class: "flex items-center gap-1") do
       LOCALES.each do |locale|
         active = locale == I18n.locale.to_s
