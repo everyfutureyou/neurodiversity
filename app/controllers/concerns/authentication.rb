@@ -2,6 +2,7 @@ module Authentication
   extend ActiveSupport::Concern
 
   included do
+    before_action :resume_session
     before_action :require_authentication
     helper_method :authenticated?
   end
@@ -14,11 +15,11 @@ module Authentication
 
   private
     def authenticated?
-      resume_session
+      Current.session.present?
     end
 
     def require_authentication
-      resume_session || request_authentication
+      request_authentication unless authenticated?
     end
 
     def resume_session
@@ -35,7 +36,7 @@ module Authentication
     end
 
     def after_authentication_url
-      session.delete(:return_to_after_authenticating) || root_url
+      session.delete(:return_to_after_authenticating) || posts_url
     end
 
     def start_new_session_for(user)
