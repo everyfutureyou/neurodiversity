@@ -7,6 +7,7 @@ class Components::Base < Phlex::HTML
   include Phlex::Rails::Helpers::LinkTo
   include Phlex::Rails::Helpers::FormWith
   include Phlex::Rails::Helpers::ButtonTo
+  include Phlex::Rails::Helpers::L
 
   # Expose current_user from the controller context
   def current_user = view_context.current_user

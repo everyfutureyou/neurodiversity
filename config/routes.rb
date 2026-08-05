@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /de|en/, defaults: { locale: "en" } do
     root "home#index"
 
+    # Blog
+    resources :posts, path: "blog", param: :slug, only: %i[index show]
+
     # Authentication
     resource :session, only: %i[new create destroy]
     resources :registrations, only: %i[new create] do

@@ -1,0 +1,21 @@
+published_en:
+  slug: hello-world
+  title: <%= { en: "Hello World", de: "Hallo Welt" }.to_json %>
+  body: <%= { en: "English body content.", de: "Deutscher Inhalt." }.to_json %>
+  author: one
+  published_at: <%= 1.day.ago %>
+
+published_de_only:
+  slug: nur-auf-deutsch
+  title: <%= { de: "Nur auf Deutsch" }.to_json %>
+  body: <%= { de: "Dieser Artikel existiert nur auf Deutsch." }.to_json %>
+  author: one
+  published_at: <%= 2.days.ago %>
+
+draft:
+  slug: my-draft
+  title: <%= { en: "Draft Post", de: "Entwurf" }.to_json %>
+  body: <%= { en: "Not published yet.", de: "Noch nicht veroeffentlicht." }.to_json %>
+  author: two
+  published_at:
+

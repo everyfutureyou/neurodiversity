@@ -67,6 +67,17 @@ en:
     password: "Password"
     password_confirmation: "Confirm password"
 
+  posts:
+    index:
+      title: "Blog"
+      heading: "Blog"
+      empty: "No posts published yet."
+      published_at: "Published %{date}"
+      read_more: "Read more"
+    show:
+      by: "By %{author}"
+      back: "← Back to blog"
+
   mailer:
     confirmation:
       subject: "Confirm your Neurodiversity School account"
