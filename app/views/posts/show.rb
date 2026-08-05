@@ -41,10 +41,34 @@ class Views::Posts::Show < Views::Base
           t("posts.show.back")
         end
       end
+
+      render_comments_section
     end
   end
 
   private
+
+  def render_comments_section
+    section(class: "max-w-3xl mx-auto mt-10 pt-8 border-t border-(--color-border)",
+            aria: { labelledby: "comments-heading" }) do
+      h2(id: "comments-heading", class: "text-lg font-semibold text-(--color-ink) mb-4") do
+        t("comments.heading")
+      end
+
+      div(id: "post-#{@post.id}-comments", class: "space-y-3 mb-6") do
+        roots = @post.comments.roots.includes(:user, replies: :user).oldest_first
+        if roots.empty?
+          p(id: "comments-empty", class: "text-sm text-(--color-ink-muted) italic") do
+            t("comments.none")
+          end
+        else
+          roots.each { |comment| render Components::CommentItem.new(comment: comment) }
+        end
+      end
+
+      render Components::CommentForm.new(post: @post)
+    end
+  end
 
   def article_json_ld
     {

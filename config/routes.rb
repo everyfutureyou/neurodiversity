@@ -12,7 +12,12 @@ Rails.application.routes.draw do
     root "home#index"
 
     # Blog
-    resources :posts, path: "blog", param: :slug, only: %i[index show]
+    resources :posts, path: "blog", param: :slug, only: %i[index show] do
+      resources :comments, only: %i[create destroy]
+    end
+
+    # Contact
+    resources :messages, only: %i[new create]
 
     # Authentication
     resource :session, only: %i[new create destroy]
@@ -32,6 +37,7 @@ Rails.application.routes.draw do
         end
       end
       resources :users, only: %i[index]
+      resources :messages, only: %i[index destroy]
     end
 
     # Membership

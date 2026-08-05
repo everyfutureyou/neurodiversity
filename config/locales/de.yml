@@ -11,6 +11,8 @@ de:
     register: "Kostenlos beitreten"
     account: "Konto"
     admin: "Admin"
+    contact: "Kontakt"
+    messages: "Nachrichten"
 
   locale_switcher:
     switch_to_de: "Auf Deutsch wechseln"
@@ -102,6 +104,8 @@ de:
   authorization:
     member_required: "Sie muessen Mitglied sein, um auf diese Seite zuzugreifen."
     admin_required: "Sie benoetigen Admin-Zugriff fuer diese Seite."
+    sign_in_required: "Bitte melden Sie sich an, um fortzufahren."
+    confirmation_required: "Bitte bestaetigen Sie zuerst Ihre E-Mail-Adresse."
 
   admin:
     posts:
@@ -189,3 +193,42 @@ de:
       free_note: "€0 ist immer moeglich. Sie koennen Ihren Betrag spaeter aendern."
       preset_free: "Kostenlos (€0)"
       submit: "Mitgliedschaft aktivieren"
+
+  comments:
+    heading: "Kommentare"
+    none: "Noch keine Kommentare. Sei der Erste!"
+    created: "Kommentar veroeffentlicht."
+    deleted: "Kommentar geloescht."
+    body_label: "Dein Kommentar"
+    body_placeholder: "Teile deine Gedanken..."
+    submit: "Kommentar abschicken"
+    sign_in_to_comment: "Melde dich an, um an der Unterhaltung teilzunehmen."
+    sign_in_cta: "Anmelden"
+    confirm_to_comment: "Bitte bestaetigen Sie zuerst Ihre E-Mail-Adresse."
+    delete: "Loeschen"
+    confirm_delete: "Diesen Kommentar loeschen?"
+
+  messages:
+    sent: "Ihre Nachricht wurde gesendet. Vielen Dank!"
+    new:
+      title: "Team kontaktieren"
+      heading: "Team kontaktieren"
+      description: "Haben Sie eine Frage oder Feedback? Wir freuen uns ueber Ihre Nachricht."
+      subject_label: "Betreff"
+      body_label: "Nachricht"
+      submit: "Nachricht senden"
+
+  admin:
+    messages:
+      title: "Admin — Nachrichten"
+      heading: "Nachrichten"
+      empty: "Noch keine Nachrichten."
+      deleted: "Nachricht geloescht."
+      columns:
+        sender: "Absender"
+        subject: "Betreff"
+        received: "Erhalten"
+        actions: "Aktionen"
+      actions:
+        delete: "Loeschen"
+        confirm_delete: "Diese Nachricht loeschen? Dies kann nicht rueckgaengig gemacht werden."

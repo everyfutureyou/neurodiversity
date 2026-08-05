@@ -1,0 +1,4 @@
+one:
+  user: member
+  subject: "Question about membership"
+  body: "I have a question about how the membership works."

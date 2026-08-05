@@ -11,6 +11,8 @@ en:
     register: "Join free"
     account: "Account"
     admin: "Admin"
+    contact: "Contact"
+    messages: "Messages"
 
   locale_switcher:
     switch_to_de: "Switch to German"
@@ -102,6 +104,8 @@ en:
   authorization:
     member_required: "You need to be a member to access this page."
     admin_required: "You need admin access to view this page."
+    sign_in_required: "Please sign in to continue."
+    confirmation_required: "Please confirm your email address before posting."
 
   admin:
     posts:
@@ -189,3 +193,42 @@ en:
       free_note: "€0 is always available. You can change your amount later."
       preset_free: "Free (€0)"
       submit: "Activate membership"
+
+  comments:
+    heading: "Comments"
+    none: "No comments yet. Be the first!"
+    created: "Comment posted."
+    deleted: "Comment deleted."
+    body_label: "Your comment"
+    body_placeholder: "Share your thoughts..."
+    submit: "Post comment"
+    sign_in_to_comment: "Sign in to join the conversation."
+    sign_in_cta: "Sign in"
+    confirm_to_comment: "Please confirm your email address to post a comment."
+    delete: "Delete"
+    confirm_delete: "Delete this comment?"
+
+  messages:
+    sent: "Your message has been sent. Thank you!"
+    new:
+      title: "Contact the team"
+      heading: "Contact the team"
+      description: "Have a question or feedback? We would love to hear from you."
+      subject_label: "Subject"
+      body_label: "Message"
+      submit: "Send message"
+
+  admin:
+    messages:
+      title: "Admin — Messages"
+      heading: "Messages"
+      empty: "No messages yet."
+      deleted: "Message deleted."
+      columns:
+        sender: "Sender"
+        subject: "Subject"
+        received: "Received"
+        actions: "Actions"
+      actions:
+        delete: "Delete"
+        confirm_delete: "Delete this message? This cannot be undone."

@@ -1,0 +1,2 @@
+<%= turbo_stream.prepend "post-#{@post.id}-comments",
+  render(Components::CommentItem.new(comment: @comment)) %>

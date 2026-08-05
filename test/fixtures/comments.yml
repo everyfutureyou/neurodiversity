@@ -1,0 +1,11 @@
+root_comment:
+  post: published_en
+  user: member
+  parent_id:
+  body: "This is a top-level comment."
+
+reply_comment:
+  post: published_en
+  user: one
+  parent_id: <%= ActiveRecord::FixtureSet.identify(:root_comment) %>
+  body: "This is a reply."

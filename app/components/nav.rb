@@ -10,7 +10,11 @@ class Components::Nav < Components::Base
         div(class: "flex items-center gap-4") do
           render Components::LocaleSwitcher.new
           if current_user
-            link_to t("nav.admin"), admin_posts_path, class: nav_link_classes if current_user.admin?
+            if current_user.admin?
+              link_to t("nav.admin"), admin_posts_path, class: nav_link_classes
+              link_to t("nav.messages"), admin_messages_path, class: nav_link_classes
+            end
+            link_to t("nav.contact"), new_message_path, class: nav_link_classes
             link_to t("nav.account"), "#", class: nav_link_classes
             link_to t("nav.sign_out"), session_path, data: { turbo_method: :delete },
                     class: nav_link_classes
