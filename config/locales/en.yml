@@ -2,6 +2,9 @@ en:
   app:
     name: "Neurodiversity School"
 
+  meta:
+    description: "A community-led platform exploring ADHD, autism, dyslexia, and more."
+
   nav:
     sign_in: "Sign in"
     sign_out: "Sign out"

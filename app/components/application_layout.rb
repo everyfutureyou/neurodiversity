@@ -6,9 +6,10 @@ class Components::ApplicationLayout < Components::Base
   include Phlex::Rails::Helpers::StylesheetLinkTag
   include Phlex::Rails::Helpers::JavascriptImportmapTags
 
-  def initialize(title: nil, theme: "default")
+  def initialize(title: nil, theme: "default", meta: {})
     @title = title
     @theme = theme
+    @meta = meta
   end
 
   def view_template(&content)
@@ -21,6 +22,7 @@ class Components::ApplicationLayout < Components::Base
         meta name: "apple-mobile-web-app-capable", content: "yes"
         csrf_meta_tags
         csp_meta_tag
+        render Components::MetaTags.new(title: @title || t("app.name"), **@meta)
         stylesheet_link_tag "tailwind.css", "data-turbo-track": "reload"
         javascript_importmap_tags
       end

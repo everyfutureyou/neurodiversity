@@ -2,6 +2,9 @@ de:
   app:
     name: "Neurodiversitaet Schule"
 
+  meta:
+    description: "Eine gemeinschaftliche Plattform zu ADHS, Autismus, Legasthenie und mehr."
+
   nav:
     sign_in: "Anmelden"
     sign_out: "Abmelden"

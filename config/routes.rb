@@ -43,6 +43,9 @@ Rails.application.routes.draw do
   # Stripe webhooks — outside locale scope, no CSRF, raw body
   post "webhooks/stripe", to: "webhooks/stripe#create"
 
+  # XML sitemap for crawlers
+  get "sitemap.xml", to: "sitemap#show", as: :sitemap, defaults: { format: :xml }
+
   # Dev-only component gallery
   if Rails.env.development?
     namespace :dev do

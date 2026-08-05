@@ -7,6 +7,20 @@ class Views::Posts::Show < Views::Base
 
   def page_title = @post.localized_title
 
+  def page_meta
+    description = @post.localized_body.first(160)
+    {
+      description: description,
+      og: {
+        title: @post.localized_title,
+        description: description,
+        type: "article",
+        url: view_context.request.original_url
+      },
+      json_ld: article_json_ld
+    }
+  end
+
   def page_content
     article(class: "max-w-3xl mx-auto") do
       header(class: "mb-8") do
@@ -28,5 +42,18 @@ class Views::Posts::Show < Views::Base
         end
       end
     end
+  end
+
+  private
+
+  def article_json_ld
+    {
+      "@context" => "https://schema.org",
+      "@type" => "Article",
+      "headline" => @post.localized_title,
+      "datePublished" => @post.published_at.iso8601,
+      "author" => { "@type" => "Person", "email" => @post.author_email_address },
+      "url" => view_context.request.original_url
+    }
   end
 end
