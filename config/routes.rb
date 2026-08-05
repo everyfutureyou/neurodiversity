@@ -22,6 +22,17 @@ Rails.application.routes.draw do
       end
     end
     resources :passwords, param: :token, only: %i[new create edit update]
+
+    # Admin panel
+    namespace :admin do
+      resources :posts, param: :slug, only: %i[index new create edit update destroy] do
+        member do
+          patch :publish
+          patch :unpublish
+        end
+      end
+      resources :users, only: %i[index]
+    end
   end
 
   # Dev-only component gallery

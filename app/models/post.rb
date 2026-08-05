@@ -18,6 +18,14 @@ class Post < ApplicationRecord
     published_at.present? && published_at <= Time.current
   end
 
+  def publish!
+    update!(published_at: Time.current)
+  end
+
+  def unpublish!
+    update!(published_at: nil)
+  end
+
   def localized_title(locale = I18n.locale)
     localized_field(title, locale)
   end

@@ -7,6 +7,7 @@ de:
     sign_out: "Abmelden"
     register: "Kostenlos beitreten"
     account: "Konto"
+    admin: "Admin"
 
   locale_switcher:
     switch_to_de: "Auf Deutsch wechseln"
@@ -77,6 +78,60 @@ de:
     show:
       by: "Von %{author}"
       back: "← Zurueck zum Blog"
+
+  authorization:
+    member_required: "Sie muessen Mitglied sein, um auf diese Seite zuzugreifen."
+    admin_required: "Sie benoetigen Admin-Zugriff fuer diese Seite."
+
+  admin:
+    posts:
+      title: "Admin — Beitraege"
+      heading: "Beitraege"
+      new: "Neuer Beitrag"
+      edit: "Beitrag bearbeiten"
+      empty: "Noch keine Beitraege."
+      created: "Beitrag erstellt."
+      updated: "Beitrag aktualisiert."
+      deleted: "Beitrag geloescht."
+      published: "Beitrag veroeffentlicht."
+      unpublished: "Beitrag zurueckgezogen."
+      columns:
+        title: "Titel"
+        slug: "Slug"
+        status: "Status"
+        author: "Autor"
+        actions: "Aktionen"
+      status:
+        published: "Veroeffentlicht"
+        draft: "Entwurf"
+      actions:
+        edit: "Bearbeiten"
+        publish: "Veroeffentlichen"
+        unpublish: "Zurueckziehen"
+        delete: "Loeschen"
+        confirm_delete: "Diesen Beitrag loeschen? Dies kann nicht rueckgaengig gemacht werden."
+      fields:
+        slug: "Slug"
+        title_en: "Titel (EN)"
+        title_de: "Titel (DE)"
+        body_en: "Inhalt (EN)"
+        body_de: "Inhalt (DE)"
+        save: "Beitrag speichern"
+        cancel: "Abbrechen"
+    users:
+      title: "Admin — Benutzer"
+      heading: "Benutzer"
+      confirmed: "Bestaetigt"
+      unconfirmed: "Unbestaetigt"
+      columns:
+        email: "E-Mail"
+        role: "Rolle"
+        confirmed: "Bestaetigt"
+        joined: "Beigetreten"
+      roles:
+        guest: "Gast"
+        member: "Mitglied"
+        admin: "Admin"
 
   mailer:
     confirmation:

@@ -7,6 +7,7 @@ en:
     sign_out: "Sign out"
     register: "Join free"
     account: "Account"
+    admin: "Admin"
 
   locale_switcher:
     switch_to_de: "Switch to German"
@@ -77,6 +78,60 @@ en:
     show:
       by: "By %{author}"
       back: "← Back to blog"
+
+  authorization:
+    member_required: "You need to be a member to access this page."
+    admin_required: "You need admin access to view this page."
+
+  admin:
+    posts:
+      title: "Admin — Posts"
+      heading: "Posts"
+      new: "New post"
+      edit: "Edit post"
+      empty: "No posts yet."
+      created: "Post created."
+      updated: "Post updated."
+      deleted: "Post deleted."
+      published: "Post published."
+      unpublished: "Post unpublished."
+      columns:
+        title: "Title"
+        slug: "Slug"
+        status: "Status"
+        author: "Author"
+        actions: "Actions"
+      status:
+        published: "Published"
+        draft: "Draft"
+      actions:
+        edit: "Edit"
+        publish: "Publish"
+        unpublish: "Unpublish"
+        delete: "Delete"
+        confirm_delete: "Delete this post? This cannot be undone."
+      fields:
+        slug: "Slug"
+        title_en: "Title (EN)"
+        title_de: "Title (DE)"
+        body_en: "Body (EN)"
+        body_de: "Body (DE)"
+        save: "Save post"
+        cancel: "Cancel"
+    users:
+      title: "Admin — Users"
+      heading: "Users"
+      confirmed: "Confirmed"
+      unconfirmed: "Unconfirmed"
+      columns:
+        email: "Email"
+        role: "Role"
+        confirmed: "Confirmed"
+        joined: "Joined"
+      roles:
+        guest: "Guest"
+        member: "Member"
+        admin: "Admin"
 
   mailer:
     confirmation:
