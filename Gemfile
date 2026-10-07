@@ -27,7 +27,7 @@ gem "tailwindcss-rails"
 gem "phlex-rails"
 
 # Stripe payments
-gem "stripe", "~> 13.0"
+gem "stripe", "~> 20.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
